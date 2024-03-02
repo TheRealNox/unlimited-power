@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Unlimited Power",
+    "name": "Unlimited Toolkit",
     "slug": "unlimited-toolkit",
     "version": "1.0.1",
     "orientation": "portrait",
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.rdonnelly.unlimitedpower",
+      "bundleIdentifier": "u.noxengineering.unlimitedtoolkit",
       "config": {
         "usesNonExemptEncryption": false
       }
@@ -26,7 +26,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#faf5ff"
       },
-      "package": "com.rdonnelly.unlimitedpower"
+      "package": "eu.noxengineering.unlimitedtoolkit"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,9 +34,6 @@
     "extra": {
       "eas": {
         "projectId": "ee82db69-6877-49ef-b2fe-d6e0de0c982b"
-      },
-      "bugsnag": {
-        "apiKey": "4fcfa114f0ed4f08c3360f4eb32adb05"
       }
     }
   }

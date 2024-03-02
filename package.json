@@ -10,7 +10,7 @@
     "build:android:dev": "npx eas-cli@latest build --platform android --profile development",
     "build:ios:dev": "npx eas-cli@latest build --platform ios --profile development",
     "build:ios:simulator": "npx eas-cli@latest build --platform ios --profile development-simulator",
-    "push:android": "npx eas-cli@latest build --platform android --auto-submit",
+    "push:android": "npx eas-cli@latest build --platform android --auto-submit --profile development",
     "push:ios": "npx eas-cli@latest build --platform ios --auto-submit",
     "web-build": "npx expo export:web"
   },
