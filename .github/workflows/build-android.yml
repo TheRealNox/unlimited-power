@@ -21,3 +21,9 @@ jobs:
     - name: Install expo-dev-client
       run: expo install expo-dev-client
     - run: eas build --platform android --profile development --non-interactive
+    - name: Upload APK to GitHub Releases
+      uses: actions/upload-release-asset@v1
+      with:
+        asset_path: ./android/app/build/outputs/apk/release/app-release.apk
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        repository: ${{ github.repository }}
