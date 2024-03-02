@@ -1,48 +1,19 @@
-name: Build and Release Expo Android App
+name: Build Android App with Expo EAS
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
       - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: EAS Build - Android
-      run: npx eas-cli@latest build --platform android --profile development
-      env:
-        EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
-    - name: Download the built artifact
-      run: npx eas-cli@latest build:download --platform android --artifact-type apk
-      env:
-        EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-      
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: expo/expo-github-action@v6
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-
-    - name: Upload APK to Release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./artifact.apk
-        asset_name: unlimited-power-${{ github.run_number }}.apk
-        asset_content_type: application/vnd.android.package-archive
+        expo-version: latest
+        eas-version: latest
+        token: ${{ secrets.EXPO_TOKEN }}
+    - run: eas build --platform android --profile development --non-interactive
