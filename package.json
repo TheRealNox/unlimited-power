@@ -11,7 +11,8 @@
     "build:ios:dev": "npx eas-cli@latest build --platform ios --profile development",
     "build:ios:simulator": "npx eas-cli@latest build --platform ios --profile development-simulator",
     "push:android": "npx eas-cli@latest build --platform android --auto-submit",
-    "push:ios": "npx eas-cli@latest build --platform ios --auto-submit"
+    "push:ios": "npx eas-cli@latest build --platform ios --auto-submit",
+    "web-build": "expo build:web"
   },
   "dependencies": {
     "@bugsnag/expo": "^50.0.0",
