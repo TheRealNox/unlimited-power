@@ -16,4 +16,8 @@ jobs:
         expo-version: latest
         eas-version: latest
         token: ${{ secrets.EXPO_TOKEN }}
+    - name: Install npm dependencies
+      run: npm install
+    - name: Install expo-dev-client
+      run: expo install expo-dev-client
     - run: eas build --platform android --profile development --non-interactive
