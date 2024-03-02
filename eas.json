@@ -5,15 +5,15 @@
   },
   "build": {
     "development": {
-      "developmentClient": true,
-      "distribution": "internal",
+      "autoIncrement": true,
+      "developmentClient": false,
       "android": {
         "withoutCredentials": true,
         "gradleCommand": ":app:assembleDebug"
       }
     },
     "development-simulator": {
-      "developmentClient": true,
+      "developmentClient": false,
       "distribution": "internal",
       "ios": {
         "simulator": true
