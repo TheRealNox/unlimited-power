@@ -31,6 +31,8 @@ export function InfoScreen({ navigation }: InfoScreenProps) {
           <Text style={[styles.creditText, themeStyles.themedColor]}>{`
 Designed and Developed by
 Ryan Donnelly
+Modified by
+Nox Engineering
             `}</Text>
         </>
       </A>

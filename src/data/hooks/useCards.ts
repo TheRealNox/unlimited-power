@@ -31,7 +31,7 @@ const fetchCards = async ({ pageParam = 1, queryKey }) => {
 
   const response = await (
     await fetch(
-      `https://admin.starwarsunlimited.com/api/cards?locale=en&${query}`,
+      `https://admin.starwarsunlimited.com/api/cards?locale=fr&${query}`,
     )
   ).json();
 
