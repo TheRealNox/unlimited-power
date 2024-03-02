@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "u.noxengineering.unlimitedtoolkit",
+      "bundleIdentifier": "eu.noxengineering.unlimitedtoolkit",
       "config": {
         "usesNonExemptEncryption": false
       }
